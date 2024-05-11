@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Logo from "../../../HOF WEB/logo.png";
-import Dez from "../../../HOF WEB/cut.png";
-import Hi from "../../../HOF WEB/hi.png";
-import Bg from "../../../HOF WEB/pattern.png";
+import Logo from "../../../web/logo.png";
+import Dez from "../../../web/cut.png";
+import Hi from "../../../web/hi.png";
+import Bg from "../../../web/pattern.png";
 import Link from "next/link";
 
 export default function About() {

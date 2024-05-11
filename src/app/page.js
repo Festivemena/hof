@@ -1,11 +1,11 @@
 import Image from "next/image";
-import Logo from "../../HOF WEB/logo.png";
-import Dez from "../../HOF WEB/cut.png";
-import Hi from "../../HOF WEB/hi.png";
-import Bg from "../../HOF WEB/pattern2.png";
-import Fla from "../../HOF WEB/fla.png";
-import Act from "../../HOF WEB/act.png";
-import Pra from "../../HOF WEB/pra.png";
+import Logo from "../../web/logo.png";
+import Dez from "../../web/cut.png";
+import Hi from "../../web/hi.png";
+import Bg from "../../web/pattern2.png";
+import Fla from "../../web/fla.png";
+import Act from "../../web/act.png";
+import Pra from "../../web/pra.png";
 import Intro from "../../components/home";
 import Hero from "../../components/hero";
 import Link from "next/link";
