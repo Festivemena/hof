@@ -2,7 +2,7 @@ import Image from "next/image";
 import Logo from "../../web/logo.png";
 import Dez from "../../web/cut.png";
 import Hi from "../../web/hi.png";
-import Bg from "../../web/pattern2.png";
+import Bg from "../../web/Pattern2.png";
 import Fla from "../../web/fla.png";
 import Act from "../../web/act.png";
 import Pra from "../../web/pra.png";
