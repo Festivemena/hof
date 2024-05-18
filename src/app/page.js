@@ -6,8 +6,6 @@ import Bg from "../../web/Pattern2.png";
 import Fla from "../../web/fla.png";
 import Act from "../../web/act.png";
 import Pra from "../../web/pra.png";
-import Intro from "../../components/home";
-import Hero from "../../components/hero";
 import Link from "next/link";
 import { MdMenu } from "react-icons/md";
 import { FaFacebook, FaYoutube, FaTiktok, FaGoogle, FaWhatsapp } from 'react-icons/fa';
