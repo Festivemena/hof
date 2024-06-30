@@ -12,32 +12,78 @@ import { FaFacebook, FaYoutube, FaTiktok, FaGoogle, FaWhatsapp } from 'react-ico
 
 export default function Home() {
   return (
-    <main className="bg-black pt-4 md:pt-10 w-full h-full">
-    <div className="px-2 md:px-6 flex justify-between sticky w-full">
-    <Link href={"/"}>
-      <div className="ml-10  md:flex hidden text-3xl">
-        <Image src={Logo} width={70} height={70} />
+    <main className="bg-[#111827] w-full h-full">
+           <div className="navbar hidden md:flex bg-base-100">
+  <div className="flex-1">
+  <div className="ml-10  md:flex my-3 hidden">
+        <Image src={Logo} width={50} height={50} />
       </div>
-      <div className=" md:hidden ml-2 text-3xl">
+      <div className=" md:hidden ml-2  my-2">
         <Image src={Logo} width={55} height={55} />
       </div>
-    </Link>
-      <div className="hidden md:flex  text-white">
-    <div className="justify-between flex text-lg mr-24 pt-6 px-4">
-        <Link href={"/about"}>
+  </div>
+  <div className="navbar-center">
+    <a className="btn btn-ghost text-orange-500 text-xl">Flamezone Academy</a>
+  </div>
+  <div className="navbar-end flex-none">
+    <ul className="menu menu-horizontal px-1">
+    <Link href={"/about"}>
       <div className='mx-auto pr-4'>About HOF</div></Link>  
-      <div className='mx-auto pr-4'>Register</div>
-      <div className='mx-auto pr-4'>Contact</div>
+      <Link href={"/register"}>
+      <div className='mx-auto pr-4'>Flamezone</div></Link>
+      <Link href={"https://wa.me/+2349032865677"}>
+      <div className='mx-auto pr-4'>Contact</div></Link>
       <Link href={"https://t.me/thehofglobal"}>
       <div className='mx-auto pr-4'>Sermons</div>
       </Link>
       <div className='mx-auto pr-4'>Givings</div>
-    </div>
+      {/* <li>
+        <details>
+          <summary>Parent</summary>
+          <ul className="bg-base-100 rounded-t-none p-2">
+            <li><a>Link 1</a></li>
+            <li><a>Link 2</a></li>
+          </ul>
+        </details>
+      </li> */}
+    </ul>
   </div>
-  <div className="flex md:hidden">
-    <MdMenu color="#fff" size={36} />
+</div>
+<div className="navbar flex md:hidden bg-base-100">
+  <div className="flex-none">
+    <button className="btn btn-square btn-ghost">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        className="inline-block h-5 w-5 stroke-current">
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
   </div>
-      </div> 
+  <div className="flex-1">
+    <a className="btn btn-ghost text-orange-500  text-xl">Flamezone</a>
+  </div>
+  <div className="flex-none">
+    <button className="btn btn-square btn-ghost">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        className="inline-block h-5 w-5 stroke-current">
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+      </svg>
+    </button>
+  </div>
+</div>
       <div className='w-full hidden h-full md:flex'>
       <Image src={Dez} className=" pt-24 z-30" width={600} height={750} />
       <div className="-mt-16">

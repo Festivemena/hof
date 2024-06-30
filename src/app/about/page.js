@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Logo from "../../../web/logo.png";
 import Link from "next/link";
+// import { useRouter } from "next/navigation";
 
 export default function About() {
   return (
