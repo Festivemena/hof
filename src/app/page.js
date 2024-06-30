@@ -7,6 +7,7 @@ import Fla from "../../web/fla.png";
 import Act from "../../web/act.png";
 import Pra from "../../web/pra.png";
 import Link from "next/link";
+import Mission from '../../web/mission.png'
 import { MdMenu } from "react-icons/md";
 import { FaFacebook, FaYoutube, FaTiktok, FaGoogle, FaWhatsapp } from 'react-icons/fa';
 
@@ -23,13 +24,11 @@ export default function Home() {
       </div>
   </div>
   <div className="navbar-center">
-    <a className="btn btn-ghost text-orange-500 text-xl">Flamezone Academy</a>
+    <a className="btn btn-ghost text-orange-500 text-xl">{" "}</a>
   </div>
   <div className="navbar-end flex-none">
     <ul className="menu menu-horizontal px-1">
-    <Link href={"/about"}>
-      <div className='mx-auto pr-4'>About HOF</div></Link>  
-      <Link href={"/register"}>
+      <Link href={"/flamezone"}>
       <div className='mx-auto pr-4'>Flamezone</div></Link>
       <Link href={"https://wa.me/+2349032865677"}>
       <div className='mx-auto pr-4'>Contact</div></Link>
@@ -66,21 +65,11 @@ export default function Home() {
     </button>
   </div>
   <div className="flex-1">
-    <a className="btn btn-ghost text-orange-500  text-xl">Flamezone</a>
+    <a className="btn btn-ghost text-orange-500  text-xl">{" "}</a>
   </div>
   <div className="flex-none">
     <button className="btn btn-square btn-ghost">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        className="inline-block h-5 w-5 stroke-current">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
-      </svg>
+     <a href="/flamezone" className="pr-6 ">Flamezone</a>
     </button>
   </div>
 </div>
@@ -96,31 +85,35 @@ export default function Home() {
          <Image src={Hi} width={320} className="mt-16 pr-6 z-30" height={400} />
      </div>
     </div>
-    <div className="w-full h-full hidden md:flex items-stretch relative -mt-[220px]">
-      <Image src={Bg} width={1600} height={150} />
+
+    <div>
+    <div className=" bg-blue-100 border-2 border-red-500  md:px-4 mx-4 shadow-solid-about rounded flex-col items-center justify-center text-center">
+                <div className=" flex items-center w-full">
+                    <Image src={Fla} className='w-full' alt="host" />
+                  </div>
+                  <h1 className="md:text-xl text-sm text-orange-500 font-semibold">
+                   Join us for FLames Alive
+                  </h1>
+                </div>
     </div>
-    <div className="w-full h-full items-stretch relative -mt-[72px] flex md:hidden">
-      <Image src={Bg} width={1600} height={150} />
-    </div>
-    <div className="w-full h-full hidden md:flex items-stretch relative">
-      <Image src={Fla} width={1600} height={350} />
-    </div>
-    <div className="w-full h-full hidden md:flex items-stretch relative">
-    <Image src={Act} width={750} height={350} />
-      <Image src={Pra} width={750} height={350} />
-    </div>
-    <div className="w-full h-full flex md:hidden items-stretch relative">
-      <Image src={Fla} width={1600} height={350} />
-    </div>
-    <div className="w-full flex">
-    <div className="w-full h-full flex md:hidden items-stretch relative">
-    <Image src={Act} width={325} height={450} />
-    </div>
-    <div className="w-full h-full flex md:hidden items-stretch relative">
-    <Image src={Pra} width={325} height={450} />
-    </div>
-    </div>
-    <div className="fw-full text-center mt-2 mb-2 hidden md:flex items-center justify-center">
+    <div className=" bg-blue-100 border-2 border-red-500  md:px-4 mx-4 shadow-solid-about rounded flex-col items-center justify-center text-center">
+                <div className=" flex items-center w-full">
+                    <Image src={Act} className='w-full' alt="host" />
+                  </div>
+                  <h1 className="md:text-xl text-sm text-orange-500 font-semibold">
+                   Acts of the Believers
+                  </h1>
+                </div>
+    <div className=" bg-blue-100 border-2 border-red-500  md:px-4 mx-4 shadow-solid-about rounded flex-col items-center justify-center text-center">
+    <div className=" flex items-center w-full">
+        <Image src={Pra} className='w-full' alt="host" />
+      </div>
+      <h1 className="md:text-xl text-sm text-orange-500 font-semibold">
+       Join us for Prayer Walk
+      </h1>
+</div>
+    
+    <div className="w-full text-center mt-2 mb-2 hidden md:flex items-center justify-center">
     <FaFacebook size={30} color="#3b5998" />
       <FaYoutube size={30} color="#ff0000" />
       <FaTiktok size={30} color="#fff" />
@@ -128,11 +121,11 @@ export default function Home() {
       <FaWhatsapp size={30} color="#25d366" />
     </div>
     <div className="flex md:hidden w-full text-center mt-3 mb-3 items-center justify-center">
-    <FaFacebook size={20} color="#3b5998" />
-      <FaYoutube size={20} color="#ff0000" />
-      <FaTiktok size={20} color="#fff" />
-      <FaGoogle size={20} color="#db4437" />
-      <FaWhatsapp size={20} color="#25d366" />
+    <FaFacebook size={18} color="#3b5998" />
+      <FaYoutube size={18} color="#ff0000" />
+      <FaTiktok size={18} color="#fff" />
+      <FaGoogle size={18} color="#db4437" />
+      <FaWhatsapp size={18} color="#25d366" />
     </div>
     </main>
   );

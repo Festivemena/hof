@@ -2,6 +2,7 @@
 
 
 import React, { useState } from 'react'
+import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion'; 
 import Image from "next/image";
 import Link from 'next/link';
@@ -11,6 +12,7 @@ import axios from 'axios';
 
 const page = () => {
   const [selected, setSelected] = useState(false);
+  const router = useRouter();
   const Register = () => {
     const LoginForm = () => {
       const [hovered, setHovered] = useState(false);
@@ -129,105 +131,44 @@ const Catalogue = () => {
 
   return (
     <div>
-    <div className="w-full ">
+    <div className="w-full h-full ">
             </div>
-            <div className=" h-full items-center md:mt-0 mt-6 justify-center md:mx-6 mx-6 flex-col flex md:gap-32 gap-6 font-outfit ">
+            <div className=" h-full items-center md:mt-0 mt-6 justify-center md:mx-6 mx-6 flex-col flex pb-8 md:gap-32 gap-6 font-outfit ">
               <div className="w-[100%] justify-center flex flex-col md:flex-row md:gap-10 gap-6">
                 <div className="  bg-blue-100 border-2 border-red-500  md:px-4 mt-6 mx-4 shadow-solid-about rounded flex-col items-center justify-center text-center">
-                <div className=" flex md:mx-40 mx-28 items-center mt-5 bg-black rounded-full w-[60px] h-[60px]">
+                {/* <div className=" flex md:mx-40 mx-28 items-center mt-5 bg-black rounded-full w-[60px] h-[60px]">
                     <Image src={Mission} className='ml-[5px]' alt="host" width={50} height={50} />
-                  </div>
+                  </div> */}
                   <h1 className="md:text-xl text-xl text-violet-600 font-semibold pt-5">
                     Believer's Buildup
                   </h1>
-                  <h5 className="text-sm md:text-md flex p-4 md:px-8 md:pt-5">
-                  Our innovative solution at BinZ ensures the effective and hygienic collection of waste, preventing contamination and disease spread. Our smart bins create a barrier between users and collected trash, ensuring safety and cleanliness. Additionally, when a bin is full, our system promptly notifies waste collection officers for immediate pick-up, ensuring efficient and timely waste management.
+                  <h5 className="text-sm md:text-md text-[#000080] flex p-4 md:px-8 md:pt-5">
+                  At Flamezone Academy, we believe that a spark of faith can light up the darkest corners of the world. Our mission is to kindle that spark within each believer, equipping them with the knowledge and tools they need to grow spiritually and make a lasting impact. Through dedicated teaching and transformative experiences, we empower believers to shine their light, bringing hope, love, and inspiration to their communities and beyond. 
                   </h5>
                 </div>
                 <div onClick={() => setSelected(true)} className=" bg-blue-100 border-2 border-red-500  md:px-4 mt-6 mx-4 shadow-solid-about rounded flex-col items-center justify-center text-center">
-                <div className=" flex md:mx-40 mx-28 items-center mt-5 bg-black rounded-full w-[60px] h-[60px]">
+                {/* <div className=" flex md:mx-40 mx-28 items-center mt-5 bg-black rounded-full w-[60px] h-[60px]">
                     <Image src={Mission} className='ml-[5px]' alt="host" width={50} height={50} />
-                  </div>
+                  </div> */}
                   <h1 className="md:text-xl text-xl text-orange-500 font-semibold pt-5">
                    Business Buildup
                   </h1>
-                  <h5 className="text-sm md:text-md p-4 md:px-8 md:pt-5">
-                  BinZ stands as a testament to effective waste classification. Our advanced smart bin technology ensures precise sorting of waste, maximizing recycling efficiency and minimizing environmental impact. With BinZ, waste is meticulously classified, contributing to a cleaner and more sustainable future.
+                  <h5 className="text-sm md:text-md text-[#000080] p-4 md:px-8 md:pt-5">
+                  At Flamezone Academy, we are dedicated to transforming visionary ideas into successful businesses. Our tailored programs and expert guidance provide entrepreneurs with the tools and knowledge needed to navigate the complexities of the business world. From initial concept to market triumph, we support every step of the journey, ensuring that your business vision becomes a victorious reality. 
                   </h5>
                 </div>
                 <div className=" bg-blue-100 mt-6 mx-4 border-2 border-red-500  md:px-4 shadow-solid-about rounded flex-col items-center justify-center text-center">
-                  <div className=" flex md:mx-40 mx-28 items-center mt-5 bg-black rounded-full w-[60px] h-[60px]">
+                  {/* <div className=" flex md:mx-40 mx-28 items-center mt-5 bg-black rounded-full w-[60px] h-[60px]">
                     <Image src={Mission} className='ml-[5px]' alt="host" width={50} height={50} />
-                  </div>
+                  </div> */}
                   <h1 className="md:text-xl text-xl text-green-600 font-semibold pt-5">
                     Steward's Buildup
                   </h1>
-                  <h5 className="text-sm md:text-md  p-4 md:px-8 md:pt-5">
-                  With our advanced recycling solutions, you can rest assured that waste management is in capable hands. We handle the complexities of waste collection and classification, allowing you to focus on your core business and deliver exceptional results. Experience the peace of mind that comes with efficient recycling and reliable waste management, and let us take your sustainability efforts to new heights.
+                  <h5 className="text-sm md:text-md text-[#000080] p-4 md:px-8 md:pt-5">
+                  At Flamezone Academy, our Stewards Buildup program empowers individuals to become faithful stewards of God's gifts. Through biblical teachings and practical workshops, we help you recognize and develop your unique talents for God's glory and the service of others. Join us to fulfill your divine calling and make a lasting impact in the world for God's kingdom.
                   </h5>
                 </div>
               </div>
-
-              {/* <div className="w-[100%] justify-center mt-5 flex flex-col md:flex-row md:gap-10 gap-6">
-                <div className="  bg-blue-100 mx-4 border-2 border-black  md:px-4 shadow-solid-about-2 rounded flex-col items-center justify-center text-center">
-                  <div className=" flex md:mx-40 mx-28 items-center w-[100px] h-[50px]">
-                    <img src={ui} />
-                  </div>
-                  <h1 className="md:text-3xl text-xl text-pink-700 font-semibold pt-5">
-                    UI/UX
-                  </h1>
-                  <h5 className="text-sm md:text-md flex p-4 md:px-8 md:pt-5">
-                    Crafting Seamless Experiences: Elevate your digital presence
-                    with our exceptional UI/UX design service. Our team of
-                    skilled designers combines creativity and expertise to
-                    create captivating interfaces that engage users and drive
-                    results. From intuitive navigation to visually stunning
-                    aesthetics, we bring your vision to life, ensuring every
-                    interaction is a delightful journey. Experience the power of
-                    design that captivates, inspires, and leaves a lasting
-                    impression.
-                  </h5>
-                </div>
-                <div className=" bg-blue-100 border-2 border-black  md:px-4 mt-6 mx-4 shadow-solid-about-2 rounded flex-col items-center justify-center text-center">
-                  <div className=" flex md:mx-40 mx-28 items-center w-[100px] h-[50px]">
-                    <img src={security} />
-                  </div>
-                  <h1 className="md:text-3xl text-xl text-brown-500 font-semibold pt-5">
-                    Cyber Security
-                  </h1>
-                  <h5 className="text-sm md:text-md p-4 md:px-8 md:pt-5">
-                    we unravel the intricate tales of cyber threats,
-                    anticipating their every move. Our proactive approach
-                    identifies vulnerabilities before they can be exploited,
-                    fortifying your defenses and ensuring your digital empire
-                    remains impenetrable. But our mission goes beyond
-                    protection. We empower you with knowledge, equipping you to
-                    navigate the treacherous digital landscape. Through
-                    comprehensive audits, training programs, and strategic
-                    guidance, we empower you to become the hero of your own
-                    cybersecurity story.
-                  </h5>
-                </div>
-                <div className=" bg-blue-100 mt-6 mx-4 border-2 border-black  md:px-4 shadow-solid-about-2 rounded flex-col items-center justify-center text-center">
-                  <div className=" flex md:mx-40 mx-28 items-center w-[100px] h-[50px]">
-                    <img src={consult} />
-                  </div>
-                  <h1 className="md:text-3xl text-xl text-yellow-600 font-semibold pt-5">
-                    Consultancy
-                  </h1>
-                  <h5 className="text-sm md:text-md p-4 md:px-8 md:pt-5">
-                    Our consultancy services extend beyond advice. We work
-                    collaboratively with your team, providing hands-on support
-                    and guidance throughout the implementation process. We
-                    believe in building long-lasting partnerships, and our
-                    commitment to your success remains unwavering. Whether
-                    you're a startup looking to disrupt the market or an
-                    established enterprise seeking to stay ahead of the
-                    competition, let's unlock your business potential and embark
-                    on a journey of growth and success.
-                  </h5>
-                </div>
-              </div> */}
             </div>
             </div>
   )
@@ -238,10 +179,10 @@ const Catalogue = () => {
       <div className='w-full bg-[#1D232A] h-screen'>
         <div className="navbar hidden md:flex bg-base-100">
   <div className="flex-1">
-  <div className="ml-10  md:flex my-3 hidden">
+  <div onClick={() => { router.push('/') }} className="ml-10  md:flex my-3 hidden">
         <Image src={Logo} width={50} height={50} />
       </div>
-      <div className=" md:hidden ml-2  my-2">
+      <div onClick={() => { router.push('/') }} className=" md:hidden ml-2  my-2">
         <Image src={Logo} width={55} height={55} />
       </div>
   </div>
@@ -249,10 +190,8 @@ const Catalogue = () => {
     <a className="btn btn-ghost text-orange-500 text-xl">Flamezone Academy</a>
   </div>
   <div className="navbar-end flex-none">
-    <ul className="menu menu-horizontal px-1">
-    <Link href={"/about"}>
-      <div className='mx-auto pr-4'>About HOF</div></Link>  
-      <Link href={"/register"}>
+    <ul className="menu menu-horizontal px-1"> 
+      <Link href={"/flamezone"}>
       <div className='mx-auto pr-4'>Flamezone</div></Link>
       <Link href={"https://wa.me/+2349032865677"}>
       <div className='mx-auto pr-4'>Contact</div></Link>
@@ -273,7 +212,7 @@ const Catalogue = () => {
   </div>
 </div>
 <div className="navbar flex md:hidden bg-base-100">
-  <div className="flex-none">
+  <div onClick={() => { router.push('/') }} className="flex-none">
     <button className="btn btn-square btn-ghost">
       <svg
         xmlns="http://www.w3.org/2000/svg"
