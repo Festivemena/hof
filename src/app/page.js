@@ -113,10 +113,10 @@ export default function Home() {
       <Image src={Fla} width={1600} height={350} />
     </div>
     <div className="w-full h-full flex md:hidden items-stretch relative">
-    <Image src={Act} width={750} height={350} />
+    <Image src={Act} width={125} height={350} />
     </div>
     <div className="w-full h-full flex md:hidden items-stretch relative">
-    <Image src={Pra} width={750} height={350} />
+    <Image src={Pra} width={125} height={350} />
     </div>
     <div className="fw-full text-center mt-2 mb-2 hidden md:flex items-center justify-center">
     <FaFacebook size={30} color="#3b5998" />
