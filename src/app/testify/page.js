@@ -26,7 +26,7 @@ const page = () => {
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
-        const response = await axios.post('https://hofapi-brad.onrender.com/api/partner', formData);
+        const response = await axios.post('https://hofapi-brad.onrender.com/api/testimony', formData);
         alert("Success")
         console.log('Partnership successful:', response.data);
       } catch (error) {
@@ -88,7 +88,7 @@ const page = () => {
         <div className="hero bg-base-200 min-h-screen">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:ml-16 lg:text-left">
-      <h1 className="text-5xl font-bold">Become a Partner</h1>
+      <h1 className="text-5xl font-bold">iTestify</h1>
       <p className="py-6">
         We're glad you are taking this BOLD step by Partnering with the Ministry, The Good Lord Blesses you Abundantly
       </p>
@@ -136,6 +136,19 @@ const page = () => {
           required
         />
       </div>
+      <div className="form-control">
+          <label className="label">
+            <span className="label-text">Testimony</span>
+          </label>
+          <textarea
+            name="testimony"
+            value={formData.testimony}
+            onChange={handleChange}
+            placeholder="Your testimony"
+            className="textarea textarea-bordered"
+            required
+          />
+        </div>
       <div className="form-control mt-6">
         <button type="submit" className="btn bg-[#B41000]">
           Submit
