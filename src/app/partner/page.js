@@ -9,9 +9,12 @@ import axios from 'axios';
 
 const page = () => {
     const router = useRouter();
+    const [loading, setLoading] = useState(false);
+    const [part, setPart] = useState("");
     const [formData, setFormData] = useState({
       name: '',
       email: '',
+      partnership: '',
       phoneNumber: ''
     });
   
@@ -22,125 +25,167 @@ const page = () => {
         [name]: value
       });
     };
+
+    const handlePartnership = (type) => {
+      setPart(type);
+      setFormData({
+        ...formData,
+        partnership: type
+      });
+    };
   
     const handleSubmit = async (e) => {
+      setLoading(true);
       e.preventDefault();
       try {
         const response = await axios.post('https://hofapi-brad.onrender.com/api/partner', formData);
-        alert("Success")
+        setLoading(false);
+        alert("Success");
         console.log('Partnership successful:', response.data);
       } catch (error) {
+        setLoading(false);
         console.error('Error during Partnership:', error);
       }
     };
   
-  return (
-    <div className='w-full bg-[#1D232A] h-screen'>
-    <div className="drawer">
-      <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content flex flex-col">
-        {/* Navbar */}
-        <div className="navbar bg-base-300 w-full">
-          <div className="flex-none lg:hidden">
-            <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                className="inline-block h-6 w-6 stroke-current">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
-            </label>
+    return (
+      <div className='w-full bg-[#1D232A] h-screen'>
+        <div className="drawer">
+          <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
+          <div className="drawer-content flex flex-col">
+            {/* Navbar */}
+            <div className="navbar bg-base-300 w-full">
+              <div className="flex-none lg:hidden">
+                <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    className="inline-block h-6 w-6 stroke-current">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg>
+                </label>
+              </div>
+              <div className="mx-2 flex-1 px-2">
+                <Image onClick={() => router.push('/')} className="py-1" src={Logo} width={45} height={45} alt="HOF Logo" />
+                <div className='ml-3'>HOF Partners</div>
+              </div>
+              <div className="hidden flex-none lg:block">
+                <ul className="menu menu-horizontal">
+                  {/* Navbar menu content here */}
+                  <li><a className='ml-1 rounded-md bg-[#B41000]' href="/">Home</a></li>
+                  <li><a className='ml-1 rounded-md bg-[#B41000]' href="/flamezone">Flamezone</a></li>
+                  <li><a className='ml-1 rounded-md bg-[#B41000]' href="https://wa.me/+2349032865677">Contact</a></li>
+                  <li><a className='ml-1 rounded-md bg-[#B41000]' href="https://t.me/thehofglobal">Media</a></li>
+                  <li><a className='border-b-[2px] border-[#B41000]' href='/partner'>Become a Partner</a></li>
+                  <li><a href='/testify' className='ml-1 rounded-md bg-[#B41000]' >iTestify</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div className="mx-2 flex-1 px-2">
-            <Image onClick={() => router.push('/')} className="py-1" src={Logo} width={45} height={45} />
-            <div className='ml-3'>HOF Partners</div>
-          </div>
-          <div className="hidden flex-none lg:block">
-            <ul className="menu menu-horizontal">
-              {/* Navbar menu content here */}
-              <li><a className='ml-1 rounded-md bg-[#B41000]' href="/">Home</a></li>
-              <li><a className='ml-1 rounded-md bg-[#B41000]' href="/flamezone">Flamezone</a></li>
-              <li><a className='ml-1 rounded-md bg-[#B41000]' href="https://wa.me/+2349032865677">Contact</a></li>
-              <li><a className='ml-1 rounded-md bg-[#B41000]' href="https://t.me/thehofglobal">Media</a></li>
-              <li><a className='border-b-[2px] border-[#B41000]' href='/partner'>Become a Partner</a></li>
-              <li><a href='/testify' className='ml-1 rounded-md bg-[#B41000]' >iTestify</a></li>
+          <div className="drawer-side">
+            <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
+            <ul className="menu bg-base-200 min-h-full w-80 p-4">
+              {/* Sidebar content here */}
+              <li><a className="hover:bg-[#B41000]" href="/">Home</a></li>
+              <li><a className="hover:bg-[#B41000]" href="/flamezone">Flamezone</a></li>
+              <li><a className="hover:bg-[#B41000]" href="https://wa.me/+2349032865677">Contact</a></li>
+              <li><a className="hover:bg-[#B41000]" href="https://t.me/thehofglobal">Media</a></li>
+              <li><a className="hover:bg-[#B41000]" href='/partner'>Become a Partner</a></li>
+              <li><a href='/testify' className='hover:bg-[#B41000]' >iTestify</a></li>
             </ul>
           </div>
         </div>
-      </div>
-      <div className="drawer-side">
-        <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
-        <ul className="menu bg-base-200 min-h-full w-80 p-4">
-          {/* Sidebar content here */}
-          <li><a className="hover:bg-[#B41000]" href="/">Home</a></li>
-      <li><a className="hover:bg-[#B41000]" href="/flamezone">Flamezone</a></li>
-      <li><a className="hover:bg-[#B41000]" href="https://wa.me/+2349032865677">Contact</a></li>
-      <li><a className="hover:bg-[#B41000]" href="https://t.me/thehofglobal">Media</a></li>
-      <li><a className="hover:bg-[#B41000]" href='/partner'>Become a Partner</a></li>
-      <li><a href='/testify' className='hover:bg-[#B41000]' >iTestify</a></li>
-        </ul>
-      </div>
-    </div>
         <div className="hero bg-base-200 min-h-screen">
-  <div className="hero-content flex-col lg:flex-row-reverse">
-    <div className="text-center lg:ml-16 lg:text-left">
-      <h1 className="text-5xl font-bold">Become a Partner</h1>
-      <p className="py-6">
-        We're glad you are taking this BOLD step by Partnering with the Ministry, The Good Lord Blesses you Abundantly
-      </p>
-    </div>
-    <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-    <form className="card-body" onSubmit={handleSubmit}>
-      <div className="form-control">
-        <label className="label">
-          <span className="label-text">Name</span>
-        </label>
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          placeholder="Full name"
-          className="input input-bordered"
-          required
-        />
-      </div>
-      <div className="form-control">
-        <label className="label">
-          <span className="label-text">Email</span>
-        </label>
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          placeholder="Email"
-          className="input input-bordered"
-          required
-        />
-      </div>
-      <div className="form-control">
-        <label className="label">
-          <span className="label-text">Phone Number</span>
-        </label>
-        <input
-          type="number"
-          name="phoneNumber"
-          value={formData.phoneNumber}
-          onChange={handleChange}
-          className="input input-bordered"
-          required
-        />
-      </div>
-      <div className="form-control mt-6">
-        <button type="submit" className="btn bg-[#B41000]">
-          Submit
-        </button>
+          <div className="hero-content flex-col lg:flex-row-reverse">
+            <div className="text-center lg:ml-16 lg:text-left">
+              <h1 className="text-5xl font-bold">Become a Partner</h1>
+              <p className="py-6">
+                We're glad you are taking this BOLD step by Partnering with the Ministry, The Good Lord Blesses you Abundantly
+              </p>
+              <div className='flex-row lg:flex-col'>
+                <div className="card lg:card-side bg-base-100 shadow-xl">
+                  <div className="card-body">
+                    <h2 className="card-title">One-time Partner!</h2>
+                    <p>Become a one-time Partner with HOF</p>
+                    <div className="card-actions justify-end">
+                      <button onClick={() => handlePartnership("One-time")} className="btn bg-[#B41000]">Select</button>
+                    </div>
+                  </div>
+                </div>
+                <div className="card lg:card-side mt-1 bg-base-100 shadow-xl">
+                  <div className="card-body">
+                    <h2 className="card-title">Monthly Partner!</h2>
+                    <p>Partner with HOF Monthly</p>
+                    <div className="card-actions justify-end">
+                      <button onClick={() => handlePartnership("Monthly")} className="btn bg-[#B41000]">Select</button>
+                    </div>
+                  </div>
+                </div>
+                <div className="card lg:card-side mt-1 bg-base-100 shadow-xl">
+                  <div className="card-body">
+                    <h2 className="card-title">Weekly Partner!</h2>
+                    <p>Partner with the Ministry Weekly</p>
+                    <div className="card-actions justify-end">
+                      <button onClick={() => handlePartnership("Weekly")} className="btn bg-[#B41000]">Select</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <form className="card-body" onSubmit={handleSubmit}>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Name</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Full name"
+                    className="input input-bordered"
+                    required
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Email</span>
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Email"
+                    className="input input-bordered"
+                    required
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Phone Number</span>
+                  </label>
+                  <input
+                    type="number"
+                    name="phoneNumber"
+                    value={formData.phoneNumber}
+                    onChange={handleChange}
+                    className="input input-bordered"
+                    required
+                  />
+                </div>
+                <div className="form-control mt-6">
+                  <button type="submit" className="btn bg-[#B41000]">
+                    {loading ? (
+                      <span className="loading loading-ring loading-lg"></span>
+                    ) : (<span>Submit</span>)}
+                  </button>
       </div>
     </form>
     </div>
