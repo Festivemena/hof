@@ -50,6 +50,7 @@ const Page = () => {
                 <li><a className="ml-1 rounded-md bg-[#B41000]" href="https://wa.me/+2349032865677">Contact</a></li>
                 <li><a className="ml-1 rounded-md bg-[#B41000]" href="https://t.me/thehofglobal">Media</a></li>
                 <li><a className="ml-1 rounded-md bg-[#B41000]" href='/partner'>Become a Partner</a></li>
+                <li><a href='/testify' className='hover:bg-[#B41000]' >iTestify</a></li>
               </ul>
             </div>
           </div>
@@ -105,7 +106,7 @@ const Page = () => {
             <li><a className="hover:bg-[#B41000]" href="https://wa.me/+2349032865677">Contact</a></li>
             <li><a className="hover:bg-[#B41000]" href="https://t.me/thehofglobal">Media</a></li>
             <li><a className="hover:bg-[#B41000]" href='/partner'>Become a Partner</a></li>
-            <li><a className='hover:bg-[#B41000]'>iTestify</a></li>
+            <li><a href='/testify' className='hover:bg-[#B41000]' >iTestify</a></li>
           </ul>
         </div>
       </div>
