@@ -61,7 +61,7 @@ export default function Home() {
       <li><a className="hover:bg-[#B41000]" href="/">Home</a></li>
       <li><a className="hover:bg-[#B41000]" href="/flamezone">Flamezone</a></li>
       <li><a className="hover:bg-[#B41000]" href="https://wa.me/+2349032865677">Contact</a></li>
-      <li><a className="hover:bg-[#B41000]" href="https://t.me/thehofglobal">Media</a></li>
+      <li><a onClick={()=>document.getElementById('my_modal_1').showModal()} className="hover:bg-[#B41000]" >Media</a></li>
       <li><a className="hover:bg-[#B41000]" href='/partner'>Become a Partner</a></li>
       <li><a href='/testify' className='hover:bg-[#B41000]' >iTestify</a></li>
     </ul>
@@ -76,11 +76,33 @@ export default function Home() {
       src={Bg} width={1400} height={500}
       className="w-full hidden lg:flex rounded-lg shadow-2xl" />
     <div>
-      {/* <h1 className="text-5xl font-bold">Hello There!</h1>
-      <p className="py-6">
-       Welcome to The House of Flames; Home of Revelation, Revival
-      </p>
-      <button className="btn btn-primary">Learn More</button> */}
+    <dialog id="my_modal_1" className="modal">
+  <div className="modal-box">
+    <div className="flex-row lg:flex-col">
+    <div className="card card-compact bg-[#B41000] mt-2 shadow-xl">
+  <div className="card-body">
+    <h2 className="card-title">Gallery!</h2>
+  </div>
+</div>
+<div className="card card-compact bg-[#B41000] mt-2 shadow-xl">
+  <div className="card-body">
+    <h2 className="card-title ">Sermons!</h2>
+  </div>
+</div>
+<div className="card card-compact bg-[#B41000] mt-2 shadow-xl">
+  <div className="card-body"> 
+    <h2 className="card-title">Videos!</h2>
+  </div>
+</div>
+    </div>
+    <div className="modal-action">
+      <form method="dialog">
+        {/* if there is a button in form, it will close the modal */}
+        <button className="btn bg-[#B41000]">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
     </div>
   </div>
 </div>
