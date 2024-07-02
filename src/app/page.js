@@ -12,7 +12,9 @@ import Act from "../../web/act.png";
 import Pra from "../../web/pra.png";
 import Link from "next/link";
 import Mission from '../../web/mission.png'
-import { MdMenu } from "react-icons/md";
+import { GrGallery } from "react-icons/gr";
+import { MdAudiotrack } from "react-icons/md";
+import { MdOutlineSlowMotionVideo } from "react-icons/md";
 import { FaFacebook, FaYoutube, FaTiktok, FaGoogle, FaWhatsapp, FaInstagram } from 'react-icons/fa';
 
 export default function Home() {
@@ -77,30 +79,28 @@ export default function Home() {
       className="w-full hidden lg:flex rounded-lg shadow-2xl" />
     <div>
     <dialog id="my_modal_1" className="modal">
-  <div className="modal-box">
-    <div className="flex-row lg:flex-col">
-    <div className="card card-compact bg-[#B41000] mt-2 shadow-xl">
+    <div className="modal-box">
+    <div className="flex justify-between w-full">
+    <div className="card cursor-pointer card-compact mt-2 shadow-xl">
   <div className="card-body">
-    <h2 className="card-title">Gallery!</h2>
+    <GrGallery size={42} color="#B41000" />
   </div>
 </div>
-<div className="card card-compact bg-[#B41000] mt-2 shadow-xl">
+<div className="card card-compact cursor-pointer mt-2 shadow-xl">
   <div className="card-body">
-    <h2 className="card-title ">Sermons!</h2>
+   <MdAudiotrack size={42} color="#B41000" />
   </div>
 </div>
-<div className="card card-compact bg-[#B41000] mt-2 shadow-xl">
+<div className="card card-compact cursor-pointer mt-2 shadow-xl">
   <div className="card-body"> 
-    <h2 className="card-title">Videos!</h2>
+   <MdOutlineSlowMotionVideo size={42} color="#B41000" />
   </div>
 </div>
     </div>
-    <div className="modal-action">
-      <form method="dialog">
+      <form method="dialog" className="modal-backdrop">
         {/* if there is a button in form, it will close the modal */}
         <button className="btn bg-[#B41000]">Close</button>
       </form>
-    </div>
   </div>
 </dialog>
     </div>
