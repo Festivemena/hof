@@ -98,28 +98,27 @@ const Dashboard = () => {
         function generateMailtoLink(email, businessName, name, programName, startDate, duration, location, confirmationDeadline, documentDeadline, orientationDate, feeAmount, paymentDeadline, bankName, accountNumber, accountName, contactEmail, contactPhoneNumber, websiteUrl) {
           const subject = 'Provisional Admission Offer For Business BuildUp at Flamezone Academy';
           const body = `
-            Dear ${name},%0D%0A%0D%0A
-            We are pleased to inform you that you have been provisionally admitted into the Flamezone Academy. Congratulations on your successful application!%0D%0A%0D%0A
-            Program Details:%0D%0A%0D%0A
-            Program: ${programName}%0D%0A
-            Start Date: ${startDate}%0D%0A
-            Duration: ${duration}%0D%0A
-            Location: ${location}%0D%0A%0D%0A
-            Next Steps:%0D%0A%0D%0A
-            Confirm Your Admission: Please confirm your acceptance of this offer by replying to this email or contacting our admissions office by ${confirmationDeadline}.%0D%0A%0D%0A
-            Orientation: Attend the mandatory orientation session on ${orientationDate}.%0D%0A%0D%0A
-            Benefits of Joining Flamezone Academy:%0D%0A%0D%0A
-            - Comprehensive and hands-on training in ${programName}%0D%0A
-            - Access to experienced instructors and mentors%0D%0A
-            - Networking opportunities with industry professionals%0D%0A
-            We are excited to have you join our esteemed academy and look forward to supporting your journey in becoming novel in the business world as an envoy of God. Should you have any questions or require further assistance, please do not hesitate to contact us at ${contactEmail} or ${contactPhoneNumber}.%0D%0A%0D%0A
-            Congratulations once again, and welcome to Flamezone Academy!%0D%0A%0D%0A
-            Best Regards,%0D%0A%0D%0A
-            Desomnd Omotoyosi%0D%0A
-            Principal in Chief%0D%0A
-            Flamezone Academy%0D%0A
-            ${contactEmail}%0D%0A
-            ${contactPhoneNumber}%0D%0A
+            Dear ${name},
+            We are pleased to inform you that you have been provisionally admitted into the Flamezone Academy. Congratulations on your successful application!
+            Program Details:
+            Program: ${programName}
+            Start Date: ${startDate}
+            Location: ${location}
+            Next Steps:
+            Confirm Your Admission: Please confirm your acceptance of this offer by replying to this email or contacting our admissions office by ${confirmationDeadline}.
+            Orientation: Attend the mandatory orientation session on ${startDate}.
+            Benefits of Joining Flamezone Academy:
+            - Comprehensive and hands-on training in ${programName}
+            - Access to experienced instructors and mentors
+            - Networking opportunities with industry professionals
+            We are excited to have you join our esteemed academy and look forward to supporting your journey in becoming novel in the business world as an envoy of God. Should you have any questions or require further assistance, please do not hesitate to contact us at ${contactEmail} or ${contactPhoneNumber}.
+            Congratulations once again, and welcome to Flamezone Academy!
+            Best Regards,
+            Desomnd Omotoyosi
+            Principal in Chief
+            Flamezone Academy
+            ${contactEmail}
+            ${contactPhoneNumber}
             ${websiteUrl}`;
         
           return `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -142,7 +141,7 @@ const Dashboard = () => {
                   item.businessName,
                   item.name,
                   'Business Buildup', // Program Name
-                  '2024-08-01', // Start Date
+                  '2024-07-11 (Thursday)', // Start Date
                   '6 months', // Duration
                   'Flaming Hall', // Location
                   '2024-07-15', // Confirmation Deadline
