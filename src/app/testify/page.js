@@ -9,6 +9,7 @@ import axios from 'axios';
 
 const page = () => {
     const router = useRouter();
+    const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
       name: '',
       email: '',
@@ -24,12 +25,15 @@ const page = () => {
     };
   
     const handleSubmit = async (e) => {
+      setLoading(true);
       e.preventDefault();
       try {
         const response = await axios.post('https://hofapi-brad.onrender.com/api/testimony', formData);
+        setLoading(false);
         alert("Success")
         console.log('Partnership successful:', response.data);
       } catch (error) {
+        setLoading(false);
         console.error('Error during Partnership:', error);
       }
     };
@@ -66,7 +70,7 @@ const page = () => {
               <li><a className='ml-1 rounded-md bg-[#B41000]' href="/">Home</a></li>
               <li><a className='ml-1 rounded-md bg-[#B41000]' href="/flamezone">Flamezone</a></li>
               <li><a className='ml-1 rounded-md bg-[#B41000]' href="https://wa.me/+2349032865677">Contact</a></li>
-              <li><a className='ml-1 rounded-md bg-[#B41000]' href="https://t.me/thehofglobal">Media</a></li>
+              <li><a className='ml-1 rounded-md bg-[#B41000]' onClick={()=>document.getElementById('my_modal_1').showModal()}>Media</a></li>
               <li><a className='bg-[#B41000]' href='/partner'>Become a Partner</a></li>
               <li><a href='/testify' className='border-b-[2px] border-[#B41000]' >iTestify</a></li>
             </ul>
@@ -80,21 +84,51 @@ const page = () => {
           <li><a className="hover:bg-[#B41000]" href="/">Home</a></li>
       <li><a className="hover:bg-[#B41000]" href="/flamezone">Flamezone</a></li>
       <li><a className="hover:bg-[#B41000]" href="https://wa.me/+2349032865677">Contact</a></li>
-      <li><a className="hover:bg-[#B41000]" href="https://t.me/thehofglobal">Media</a></li>
+      <li><a className="hover:bg-[#B41000]" onClick={()=>document.getElementById('my_modal_1').showModal()}>Media</a></li>
       <li><a className="hover:bg-[#B41000]" href='/partner'>Become a Partner</a></li>
           <li><a href='/testify' className='hover:bg-[#B41000]' >iTestify</a></li>
         </ul>
       </div>
     </div>
-        <div className="hero bg-base-200 min-h-screen">
+    <div>
+    <dialog id="my_modal_1" className="modal">
+  <div className="modal-box">
+    <div className="flex-row lg:flex-col">
+    <div className="card card-compact bg-[#B41000] mt-2 shadow-xl">
+  <div className="card-body">
+    <h2 className="card-title">Gallery!</h2>
+  </div>
+</div>
+<div className="card card-compact bg-[#B41000] mt-2 shadow-xl">
+  <div className="card-body">
+    <h2 className="card-title ">Sermons!</h2>
+  </div>
+</div>
+<div className="card card-compact bg-[#B41000] mt-2 shadow-xl">
+  <div className="card-body"> 
+    <h2 className="card-title">Videos!</h2>
+  </div>
+</div>
+    </div>
+    <div className="modal-action">
+      <form method="dialog">
+        {/* if there is a button in form, it will close the modal */}
+        <button className="btn bg-[#B41000]">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+    </div>
+        <div className="lg:hero bg-base-200 min-h-screen">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:ml-16 lg:text-left">
       <h1 className="text-5xl font-bold">iTestify</h1>
-      <p className="py-6">
-        We're glad you are taking this BOLD step by Partnering with the Ministry, The Good Lord Blesses you Abundantly
-      </p>
+      <div className="py-6">
+       "I thought it good to shew the signs and wonders that the high God hath wrought toward me"
+      <p>-Daniel 4:2(KJV)</p>
+      </div>
     </div>
-    <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+    <div className="lg:card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
     <form className="card-body" onSubmit={handleSubmit}>
       <div className="form-control">
         <label className="label">
@@ -152,7 +186,9 @@ const page = () => {
         </div>
       <div className="form-control mt-6">
         <button type="submit" className="btn bg-[#B41000]">
-          Submit
+        {loading ? (
+                    <span className="loading loading-ring loading-lg"></span>
+                  ) : (<span>Submit</span>)}
         </button>
       </div>
     </form>

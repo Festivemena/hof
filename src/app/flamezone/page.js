@@ -219,7 +219,7 @@ const Catalogue = () => {
           <li><a className='ml-1 rounded-md bg-[#B41000]' href="/">Home</a></li>
           <li><a className='border-b-[2px] border-[#B41000]' href="/flamezone">Flamezone</a></li>
           <li><a className='ml-1 rounded-md bg-[#B41000]' href="https://wa.me/+2349032865677">Contact</a></li>
-          <li><a className='ml-1 rounded-md bg-[#B41000]' href="https://t.me/thehofglobal">Media</a></li>
+          <li><a className='ml-1 rounded-md bg-[#B41000]' onClick={()=>document.getElementById('my_modal_1').showModal()}>Media</a></li>
           <li><a className='ml-1 rounded-md bg-[#B41000]' href='/partner'>Become a Partner</a></li>
           <li><a href='/testify' className='ml-1 rounded-md bg-[#B41000]' >iTestify</a></li>
         </ul>
@@ -233,13 +233,42 @@ const Catalogue = () => {
       <li><a className="hover:bg-[#B41000]" href="/">Home</a></li>
       <li><a className="hover:bg-[#B41000]" href="/flamezone">Flamezone</a></li>
       <li><a className="hover:bg-[#B41000]" href="https://wa.me/+2349032865677">Contact</a></li>
-      <li><a className="hover:bg-[#B41000]" href="https://t.me/thehofglobal">Media</a></li>
+      <li><a className="hover:bg-[#B41000]" onClick={()=>document.getElementById('my_modal_1').showModal()}>Media</a></li>
       <li><a className="hover:bg-[#B41000]" href='/partner'>Become a Partner</a></li>
       <li><a href='/testify' className='hover:bg-[#B41000]' >iTestify</a></li>
     </ul>
   </div>
 </div>
       {selected ? <Register />  : <Catalogue />}
+      <div>
+    <dialog id="my_modal_1" className="modal">
+  <div className="modal-box">
+    <div className="flex-row lg:flex-col">
+    <div className="card card-compact bg-[#B41000] mt-2 shadow-xl">
+  <div className="card-body">
+    <h2 className="card-title">Gallery!</h2>
+  </div>
+</div>
+<div className="card card-compact bg-[#B41000] mt-2 shadow-xl">
+  <div className="card-body">
+    <h2 className="card-title ">Sermons!</h2>
+  </div>
+</div>
+<div className="card card-compact bg-[#B41000] mt-2 shadow-xl">
+  <div className="card-body"> 
+    <h2 className="card-title">Videos!</h2>
+  </div>
+</div>
+    </div>
+    <div className="modal-action">
+      <form method="dialog">
+        {/* if there is a button in form, it will close the modal */}
+        <button className="btn bg-[#B41000]">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+    </div>
       <footer className="footer footer-center bg-[#B41000] text-primary-content p-2 md:p-10">
   <aside>
     <Image src={Logo} width={50} height={50} />
