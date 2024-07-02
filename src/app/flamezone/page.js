@@ -12,7 +12,7 @@ import { GrGallery } from "react-icons/gr";
 import { MdAudiotrack } from "react-icons/md";
 import { MdOutlineSlowMotionVideo } from "react-icons/md";
 import axios from 'axios';
-import { FaFacebook, FaYoutube, FaTiktok, FaGoogle, FaWhatsapp, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaYoutube, FaTelegram, FaGoogle, FaWhatsapp, FaInstagram } from 'react-icons/fa';
 
 const page = () => {
   const [selected, setSelected] = useState(false);
@@ -139,7 +139,7 @@ const Catalogue = () => {
             </div>
             <div className=" h-full items-center md:mt-0 mt-6 justify-center md:mx-6 mx-6 flex-col flex pb-8 md:gap-32 gap-6 font-outfit ">
               <div className="w-[100%] justify-center flex flex-col md:flex-row md:gap-10 gap-6">
-                <div className="  bg-white rounded-lg border-4 border-red-500 hover:bg-[#B41000] md:px-4 mt-6 mx-4 shadow-solid-about flex-col items-center justify-center text-center">
+                <div className="  bg-white rounded-lg border-4 border-red-500 hover:bg-[#B41000] md:px-4 mt-6 mx-4 shadow-solid-about flex-col items-center justify-center cursor-pointer text-center">
                 {/* <div className=" flex md:mx-40 mx-28 items-center mt-5 bg-black rounded-full w-[60px] h-[60px]">
                     <Image src={Mission} className='ml-[5px]' alt="host" width={50} height={50} />
                   </div> */}
@@ -150,7 +150,7 @@ const Catalogue = () => {
                   At Flamezone Academy, we believe that a spark of faith can light up the darkest corners of the world. Our mission is to kindle that spark within each believer, equipping them with the knowledge and tools they need to grow spiritually and make a lasting impact. Through dedicated teaching and transformative experiences, we empower believers to shine their light, bringing hope, love, and inspiration to their communities and beyond. 
                   </h5>
                 </div>
-                <div onClick={() => setSelected(true)} className=" bg-white border-4 hover:bg-[#B41000] border-red-500  md:px-4 mt-6 mx-4 shadow-solid-about rounded-lg flex-col items-center justify-center text-center">
+                <div onClick={() => setSelected(true)} className=" bg-white border-4 hover:bg-[#B41000] border-red-500  md:px-4 mt-6 mx-4 shadow-solid-about rounded-lg flex-col items-center cursor-pointer justify-center text-center">
                 {/* <div className=" flex md:mx-40 mx-28 items-center mt-5 bg-black rounded-full w-[60px] h-[60px]">
                     <Image src={Mission} className='ml-[5px]' alt="host" width={50} height={50} />
                   </div> */}
@@ -161,7 +161,7 @@ const Catalogue = () => {
                   At Flamezone Academy, we are dedicated to transforming visionary ideas into successful businesses. Our tailored programs and expert guidance provide entrepreneurs with the tools and knowledge needed to navigate the complexities of the business world. From initial concept to market triumph, we support every step of the journey, ensuring that your business vision becomes a victorious reality. 
                   </h5>
                 </div>
-                <div className=" bg-white mt-6 mx-4 border-4 border-red-500 hover:bg-[#B41000] md:px-4 shadow-solid-about rounded flex-col items-center justify-center text-center">
+                <div className=" bg-white mt-6 mx-4 border-4 border-red-500 hover:bg-[#B41000] md:px-4 shadow-solid-about rounded flex-col items-center justify-center cursor-pointer text-center">
                   {/* <div className=" flex md:mx-40 mx-28 items-center mt-5 bg-black rounded-full w-[60px] h-[60px]">
                     <Image src={Mission} className='ml-[5px]' alt="host" width={50} height={50} />
                   </div> */}
@@ -172,7 +172,7 @@ const Catalogue = () => {
                   At Flamezone Academy, our Stewards Buildup program empowers individuals to become faithful stewards of God's gifts. Through biblical teachings and practical workshops, we help you recognize and develop your unique talents for God's glory and the service of others. Join us to fulfill your divine calling and make a lasting impact in the world for God's kingdom.
                   </h5>
                 </div>
-                <div className=" bg-white mt-6 mx-4 border-4 border-red-500 hover:bg-[#B41000] md:px-4 shadow-solid-about rounded flex-col items-center justify-center text-center">
+                <div className=" bg-white mt-6 mx-4 border-4 border-red-500 hover:bg-[#B41000] md:px-4 shadow-solid-about rounded flex-col items-center justify-center cursor-pointer text-center">
                   {/* <div className=" flex md:mx-40 mx-28 items-center mt-5 bg-black rounded-full w-[60px] h-[60px]">
                     <Image src={Mission} className='ml-[5px]' alt="host" width={50} height={50} />
                   </div> */}
@@ -180,7 +180,7 @@ const Catalogue = () => {
                     Ministry Buildup
                   </h1>
                   <h5 className="text-sm md:text-md text-black p-4 md:px-8 md:pt-5">
-                  At Flamezone Academy, our Stewards Buildup program empowers individuals to become faithful stewards of God's gifts. Through biblical teachings and practical workshops, we help you recognize and develop your unique talents for God's glory and the service of others. Join us to fulfill your divine calling and make a lasting impact in the world for God's kingdom.
+                  At Flamezone Academy, our Ministry Buildup program equips and trains individuals for impactful ministry work. Through in-depth biblical teachings and practical workshops, we prepare you to effectively serve and lead in God's kingdom. Join us to develop your ministry skills, fulfill your divine calling, and make a lasting impact in the world for God's glory.
                   </h5>
                 </div>
               </div>
@@ -244,23 +244,23 @@ const Catalogue = () => {
 </div>
       {selected ? <Register />  : <Catalogue />}
       <div>
-    <dialog id="my_modal_1" className="modal">
+      <dialog id="my_modal_1" className="modal">
     <div className="modal-box">
     <div className="flex justify-between w-full">
     <div className="card cursor-pointer card-compact mt-2 shadow-xl">
-  <div className="card-body">
+  <a href='https://www.instagram.com/thehofglobalmin/' className="card-body">
     <GrGallery size={42} color="#B41000" />
-  </div>
+  </a>
 </div>
 <div className="card card-compact cursor-pointer mt-2 shadow-xl">
-  <div className="card-body">
+  <a href='https://t.me/thehofglobal' className="card-body">
    <MdAudiotrack size={42} color="#B41000" />
-  </div>
+  </a>
 </div>
 <div className="card card-compact cursor-pointer mt-2 shadow-xl">
-  <div className="card-body"> 
+  <a href="https://www.youtube.com/@thehofglobalmin" className="card-body"> 
    <MdOutlineSlowMotionVideo size={42} color="#B41000" />
-  </div>
+  </a>
 </div>
     </div>
       <form method="dialog" className="modal-backdrop">
@@ -278,24 +278,24 @@ const Catalogue = () => {
       <br />
     </p>
     <p className="text-white">Copyright © 2024 - All right reserved</p>
-    <div className="text-white flex"><FaGoogle className="mr-1 pt-[2px]" size={12} /><p className="text-[10px] -mt-[2px]">thehofglobal@gmail.com</p></div>
+    <div className="text-white flex"><FaGoogle className="mr-1 pt-[2px]" size={16} /><p className="text-[12px] ">thehofglobal@gmail.com</p></div>
   </aside>
   <nav>
     <div className="grid grid-flow-col gap-1">
-      <a>
-        <FaFacebook width={24} height={24} color="#fff" />
+      <a href='facebook.com/thehofglobalmin'>
+        <FaFacebook size={24} color="#fff" />
       </a>
-      <a>
-        <FaWhatsapp width={24} height={24} color="#fff" />
+      <a href='https://wa.me/+2349032865677'>
+        <FaWhatsapp size={24} color="#fff" />
       </a>
-      <a>
-        <FaTiktok width={24} height={24} color="#fff" />
+      <a href='https://t.me/thehofglobal'>
+        <FaTelegram size={24} color="#fff" />
       </a>
-      <a>
-        <FaInstagram width={24} height={24} color="#fff" />
+      <a href='https://www.instagram.com/thehofglobalmin/ '>
+        <FaInstagram size={24} color="#fff" />
       </a>
-      <a>
-        <FaYoutube width={24} height={24} color="#fff" />
+      <a href='https://www.youtube.com/@thehofglobalmin'>
+        <FaYoutube size={24} color="#fff" />
       </a> 
     </div>
   </nav>

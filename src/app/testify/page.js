@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from 'react'
-import { FaFacebook, FaYoutube, FaTiktok, FaGoogle, FaWhatsapp, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaYoutube, FaTelegram, FaGoogle, FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
 import Image from "next/image";
 import Logo from "../../../web/bb.jpg";
@@ -98,19 +98,19 @@ const page = () => {
     <div className="modal-box">
     <div className="flex justify-between w-full">
     <div className="card cursor-pointer card-compact mt-2 shadow-xl">
-  <div className="card-body">
+  <a href='https://www.instagram.com/thehofglobalmin/' className="card-body">
     <GrGallery size={42} color="#B41000" />
-  </div>
+  </a>
 </div>
 <div className="card card-compact cursor-pointer mt-2 shadow-xl">
-  <div className="card-body">
+  <a href='https://t.me/thehofglobal' className="card-body">
    <MdAudiotrack size={42} color="#B41000" />
-  </div>
+  </a>
 </div>
 <div className="card card-compact cursor-pointer mt-2 shadow-xl">
-  <div className="card-body"> 
+  <a href="https://www.youtube.com/@thehofglobalmin" className="card-body"> 
    <MdOutlineSlowMotionVideo size={42} color="#B41000" />
-  </div>
+  </a>
 </div>
     </div>
       <form method="dialog" className="modal-backdrop">
@@ -204,24 +204,24 @@ const page = () => {
       <br />
     </p>
     <p className="text-white">Copyright © 2024 - All right reserved</p>
-    <div className="text-white flex"><FaGoogle className="mr-1 pt-[2px]" size={12} /><p className="text-[10px] -mt-[2px]">thehofglobal@gmail.com</p></div>
+    <div className="text-white flex"><FaGoogle className="mr-1 pt-[2px]" size={16} /><p className="text-[12px] ">thehofglobal@gmail.com</p></div>
   </aside>
   <nav>
     <div className="grid grid-flow-col gap-1">
-      <a>
-        <FaFacebook width={24} height={24} color="#fff" />
+      <a href='facebook.com/thehofglobalmin'>
+        <FaFacebook size={24} color="#fff" />
       </a>
-      <a>
-        <FaWhatsapp width={24} height={24} color="#fff" />
+      <a href='https://wa.me/+2349032865677'>
+        <FaWhatsapp size={24} color="#fff" />
       </a>
-      <a>
-        <FaTiktok width={24} height={24} color="#fff" />
+      <a href='https://t.me/thehofglobal'>
+        <FaTelegram size={24} color="#fff" />
       </a>
-      <a>
-        <FaInstagram width={24} height={24} color="#fff" />
+      <a href='https://www.instagram.com/thehofglobalmin/ '>
+        <FaInstagram size={24} color="#fff" />
       </a>
-      <a>
-        <FaYoutube width={24} height={24} color="#fff" />
+      <a href='https://www.youtube.com/@thehofglobalmin'>
+        <FaYoutube size={24} color="#fff" />
       </a> 
     </div>
   </nav>

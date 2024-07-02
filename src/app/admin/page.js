@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useEffect } from 'react';
-import { FaFacebook, FaYoutube, FaTiktok, FaGoogle, FaWhatsapp, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaYoutube, FaTelegram, FaGoogle, FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
 import Image from "next/image";
 import Logo from "../../../web/bb.jpg";
@@ -60,10 +60,10 @@ const Dashboard = () => {
     switch (currentState) {
       case 'state1':
         return (
-          <div>
+          <div className='w-full'>
             <h2>Partners</h2>
             {data.map((item, index) => (
-            <div key={index} className=" mt-1 bg-base-100 w-96 shadow-xl">
+            <div key={index} className=" mt-1 bg-base-100 w-[90%] shadow-xl">
   <div className="card-body">
     <h2 className="card-title">{item.name}</h2>
     <p>{item.email}</p>
@@ -78,10 +78,10 @@ const Dashboard = () => {
         );
       case 'state2':
         return (
-          <div>
+          <div className='w-full'>
             <h2>Testimonies</h2>
             {data.map((item, index) => (
-            <div key={index} className=" mt-1 bg-base-100 w-96 shadow-xl">
+            <div key={index} className=" mt-1 bg-base-100 w-[90%] shadow-xl">
   <div className="card-body">
     <h2 className="card-title">{item.email}</h2>
     <p>{item.testimony}</p>
@@ -96,10 +96,10 @@ const Dashboard = () => {
         );
       case 'state3':
         return (
-          <div>
+          <div className='w-full'>
           <h2>Business BuildUp</h2>
           {data.map((item, index) => (
-          <div key={index} className=" mt-1 bg-base-100 w-96 shadow-xl">
+          <div key={index} className=" mt-1 bg-base-100 w-full shadow-xl">
 <div className="card-body">
   <h2 className="card-title">{item.businessName}</h2>
   <p>Name: {item.name}</p>
@@ -190,19 +190,19 @@ const Dashboard = () => {
     <div className="modal-box">
     <div className="flex justify-between w-full">
     <div className="card cursor-pointer card-compact mt-2 shadow-xl">
-  <div className="card-body">
+  <a href='https://www.instagram.com/thehofglobalmin/' className="card-body">
     <GrGallery size={42} color="#B41000" />
-  </div>
+  </a>
 </div>
 <div className="card card-compact cursor-pointer mt-2 shadow-xl">
-  <div className="card-body">
+  <a href='https://t.me/thehofglobal' className="card-body">
    <MdAudiotrack size={42} color="#B41000" />
-  </div>
+  </a>
 </div>
 <div className="card card-compact cursor-pointer mt-2 shadow-xl">
-  <div className="card-body"> 
+  <a href="https://www.youtube.com/@thehofglobalmin" className="card-body"> 
    <MdOutlineSlowMotionVideo size={42} color="#B41000" />
-  </div>
+  </a>
 </div>
     </div>
       <form method="dialog" className="modal-backdrop">
@@ -255,28 +255,28 @@ const Dashboard = () => {
             <br />
           </p>
           <p className="text-white">Copyright © 2024 - All right reserved</p>
-          <div className="text-white flex"><FaGoogle className="mr-1 pt-[2px]" size={12} /><p className="text-[10px] -mt-[2px]">thehofglobal@gmail.com</p></div>
-        </aside>
-        <nav>
-          <div className="grid grid-flow-col gap-1">
-            <a>
-              <FaFacebook width={24} height={24} color="#fff" />
-            </a>
-            <a>
-              <FaWhatsapp width={24} height={24} color="#fff" />
-            </a>
-            <a>
-              <FaTiktok width={24} height={24} color="#fff" />
-            </a>
-            <a>
-              <FaInstagram width={24} height={24} color="#fff" />
-            </a>
-            <a>
-              <FaYoutube width={24} height={24} color="#fff" />
-            </a>
-          </div>
-        </nav>
-      </footer>
+    <div className="text-white flex"><FaGoogle className="mr-1 pt-[2px]" size={16} /><p className="text-[12px] ">thehofglobal@gmail.com</p></div>
+  </aside>
+  <nav>
+    <div className="grid grid-flow-col gap-1">
+      <a href='facebook.com/thehofglobalmin'>
+        <FaFacebook size={24} color="#fff" />
+      </a>
+      <a href='https://wa.me/+2349032865677'>
+        <FaWhatsapp size={24} color="#fff" />
+      </a>
+      <a href='https://t.me/thehofglobal'>
+        <FaTelegram size={24} color="#fff" />
+      </a>
+      <a href='https://www.instagram.com/thehofglobalmin/ '>
+        <FaInstagram size={24} color="#fff" />
+      </a>
+      <a href='https://www.youtube.com/@thehofglobalmin'>
+        <FaYoutube size={24} color="#fff" />
+      </a> 
+    </div>
+  </nav>
+</footer>
     </div>
   );
 };
