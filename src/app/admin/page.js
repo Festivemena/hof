@@ -114,8 +114,8 @@ const Dashboard = () => {
             We are excited to have you join our esteemed academy and look forward to supporting your journey in becoming novel in the business world as an envoy of God. Should you have any questions or require further assistance, please do not hesitate to contact us at ${contactEmail} or ${contactPhoneNumber}.
             Congratulations once again, and welcome to Flamezone Academy!
             Best Regards,
-            Desomnd Omotoyosi
-            Principal in Chief
+            Desmond Omotoyosi
+            Principal
             Flamezone Academy
             ${contactEmail}
             ${contactPhoneNumber}
