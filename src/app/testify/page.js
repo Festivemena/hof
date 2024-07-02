@@ -65,7 +65,7 @@ const page = () => {
           </div>
           <div className="mx-2 flex-1 px-2">
             <Image onClick={() => router.push('/')} className="py-1" src={Logo} width={45} height={45} />
-            <div className='ml-3'>HOF Partners</div>
+            <div className='ml-3'>iTestify</div>
           </div>
           <div className="hidden flex-none lg:block">
             <ul className="menu menu-horizontal">
