@@ -95,6 +95,36 @@ const Dashboard = () => {
           </div>
         );
       case 'state3':
+        function generateMailtoLink(email, businessName, name, programName, startDate, duration, location, confirmationDeadline, documentDeadline, orientationDate, feeAmount, paymentDeadline, bankName, accountNumber, accountName, contactEmail, contactPhoneNumber, websiteUrl) {
+          const subject = 'Provisional Admission Offer For Business BuildUp at Flamezone Academy';
+          const body = `
+            Dear ${name},%0D%0A%0D%0A
+            We are pleased to inform you that you have been provisionally admitted into the Flamezone Academy. Congratulations on your successful application!%0D%0A%0D%0A
+            Program Details:%0D%0A%0D%0A
+            Program: ${programName}%0D%0A
+            Start Date: ${startDate}%0D%0A
+            Duration: ${duration}%0D%0A
+            Location: ${location}%0D%0A%0D%0A
+            Next Steps:%0D%0A%0D%0A
+            Confirm Your Admission: Please confirm your acceptance of this offer by replying to this email or contacting our admissions office by ${confirmationDeadline}.%0D%0A%0D%0A
+            Orientation: Attend the mandatory orientation session on ${orientationDate}.%0D%0A%0D%0A
+            Benefits of Joining Flamezone Academy:%0D%0A%0D%0A
+            - Comprehensive and hands-on training in ${programName}%0D%0A
+            - Access to experienced instructors and mentors%0D%0A
+            - Networking opportunities with industry professionals%0D%0A
+            We are excited to have you join our esteemed academy and look forward to supporting your journey in becoming novel in the business world as an envoy of God. Should you have any questions or require further assistance, please do not hesitate to contact us at ${contactEmail} or ${contactPhoneNumber}.%0D%0A%0D%0A
+            Congratulations once again, and welcome to Flamezone Academy!%0D%0A%0D%0A
+            Best Regards,%0D%0A%0D%0A
+            Desomnd Omotoyosi%0D%0A
+            Principal in Chief%0D%0A
+            Flamezone Academy%0D%0A
+            ${contactEmail}%0D%0A
+            ${contactPhoneNumber}%0D%0A
+            ${websiteUrl}`;
+        
+          return `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+        
         return (
           <div className='w-full'>
           <h2>Business BuildUp</h2>
@@ -106,9 +136,28 @@ const Dashboard = () => {
   <p>Email: {item.email}</p>
   <p>Phone no:{item.phoneNumber}</p>
   <p className='pt-3'>{item.proposal}</p>
-  {/* <div className="card-actions justify-end">
-    <button className="btn btn-primary">{item.partnership}</button>
-  </div> */}
+  <div className="card-actions justify-end">
+    <a href={generateMailtoLink(
+                  item.email,
+                  item.businessName,
+                  item.name,
+                  'Business Buildup', // Program Name
+                  '2024-08-01', // Start Date
+                  '6 months', // Duration
+                  'Flaming Hall', // Location
+                  '2024-07-15', // Confirmation Deadline
+                  '2024-07-20', // Document Submission Deadline
+                  '2024-07-25', // Orientation Date
+                  '$500', // Fee Amount
+                  '2024-07-30', // Payment Deadline
+                  'Bank of Flamezone', // Bank Name
+                  '123456789', // Account Number
+                  'Flamezone Academy', // Account Name
+                  'thehofglobal@gmail.com', // Contact Email
+                  '+2349032865677', // Contact Phone Number
+                  'https://hofglobal.vercel.app' // Website URL
+                )} className="btn btn-primary">Accept</a>
+  </div>
 </div>
 </div>
 ))}
