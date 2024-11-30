@@ -95,8 +95,8 @@ const Dashboard = () => {
           </div>
         );
       case 'state3':
-        function generateMailtoLink(email, businessName, name, programName, startDate, duration, location, confirmationDeadline, documentDeadline, orientationDate, feeAmount, paymentDeadline, bankName, accountNumber, accountName, contactEmail, contactPhoneNumber, websiteUrl) {
-          const subject = 'Provisional Admission Offer For Business BuildUp at Flamezone Academy';
+        function generateMailtoLink(email, businessName, name, programName, category, startDate, duration, location, confirmationDeadline, documentDeadline, orientationDate, feeAmount, paymentDeadline, bankName, accountNumber, accountName, contactEmail, contactPhoneNumber, websiteUrl) {
+          const subject = 'Provisional Admission Offer For ${category} at Flamezone Academy';
           const body = `
             Dear ${name},
             We are pleased to inform you that you have been provisionally admitted into the Flamezone Academy. Congratulations on your successful application!
@@ -134,13 +134,14 @@ const Dashboard = () => {
   <p>Name: {item.name}</p>
   <p>Email: {item.email}</p>
   <p>Phone no:{item.phoneNumber}</p>
-  <p className='pt-3'>{item.proposal}</p>
+            <p>Category:{item.category}</p>
+  <p>Comment:{item.proposal}</p>
   <div className="card-actions justify-end">
     <a href={generateMailtoLink(
                   item.email,
                   item.businessName,
                   item.name,
-                  'Business Buildup', // Program Name
+                  item.category, // Program Name
                   '2024-07-11 (Thursday)', // Start Date
                   '6 months', // Duration
                   'Flaming Hall', // Location
