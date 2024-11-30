@@ -23,7 +23,7 @@ const page = () => {
       description: `At Flamezone Academy, our Ministry Buildup program equips and trains individuals for impactful ministry work. Through in-depth biblical teachings and practical workshops, we prepare you to effectively serve and lead in God's kingdom.`,
     },
     {
-      name: "Steward Buildup",
+      name: "Steward's Buildup",
       description: `At Flamezone Academy, our Stewards Buildup program empowers individuals to become faithful stewards of God's gifts. Through biblical teachings and practical workshops, we help you recognize and develop your unique talents for God's glory.`,
     },
     {
