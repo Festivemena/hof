@@ -96,7 +96,7 @@ const Dashboard = () => {
         );
       case 'state3':
         function generateMailtoLink(email, businessName, name, programName, category, startDate, duration, location, confirmationDeadline, documentDeadline, orientationDate, feeAmount, paymentDeadline, bankName, accountNumber, accountName, contactEmail, contactPhoneNumber, websiteUrl) {
-          const subject = 'Provisional Admission Offer For ${category} at Flamezone Academy';
+          const subject = 'Provisional Admission Offer at Flamezone Academy';
           const body = `
             Dear ${name},
             We are pleased to inform you that you have been provisionally admitted into the Flamezone Academy. Congratulations on your successful application!
@@ -116,10 +116,9 @@ const Dashboard = () => {
             Best Regards,
             Desmond Omotoyosi
             Principal
-            Flamezone Academy
+            Flamezone Institute
             ${contactEmail}
-            ${contactPhoneNumber}
-            ${websiteUrl}`;
+            ${contactPhoneNumber}`;
         
           return `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         }
