@@ -30,6 +30,10 @@ const page = () => {
       name: "Believer's Buildup",
       description: `At Flamezone Academy, we believe that a spark of faith can light up the darkest corners of the world. Our mission is to kindle that spark within each believer, equipping them with the knowledge and tools they need to grow spiritually.`,
     },
+    {
+      name: "Career Buildup",
+      description: `At Flamezone Academy, our Career Buildup program focuses on equipping individuals with the skills and resources needed for career advancement. From professional training to mentorship opportunities, we help you achieve your career goals.`,
+    },
   ];
 
   const RegisterForm = ({ category }) => {
