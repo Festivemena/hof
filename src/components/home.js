@@ -20,7 +20,7 @@ export default function HomePage() {
         <div className="mt-6 pb-4">
           <a
             href="/about"
-            className="inline-block bg-[#B41000] px-6 py-3 text-white rounded-lg font-medium hover:bg-[#2e5953] dark:hover:bg-[#3e5061] transition"
+            className="inline-block bg-[#B41000] px-6 py-6 text-white rounded-lg font-medium hover:bg-[#2e5953] dark:hover:bg-[#3e5061] transition"
           >
             Learn More About Us
           </a>
@@ -50,7 +50,7 @@ export default function HomePage() {
           ].map((item, idx) => (
             <div key={idx} className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">{item.title}</h3>
-              <p className="text-gray-600 dark:text-gray-300">{item.description}</p>
+              <p className="text-gray-600">{item.description}</p>
             </div>
           ))}
         </div>
@@ -60,7 +60,7 @@ export default function HomePage() {
       <section className="py-16 px-6 bg-white dark:bg-gray-900">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-semibold text-gray-800 dark:text-white mb-4">Our Vision</h2>
-          <p className="text-lg text-gray-700 dark:text-gray-300">
+          <p className="text-lg text-gray-700">
             To prepare quality men who are liberated, revived, reformed, and equipped 
             to represent God across generations and territories.
           </p>
@@ -72,12 +72,12 @@ export default function HomePage() {
         <h2 className="text-3xl font-semibold text-center text-gray-800 dark:text-white mb-6">Join Our Services</h2>
         <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">Sundays</h3>
+            <h3 className="text-xl font-bold mb-2 text-gray-800 ">Sundays</h3>
             <p>First Service: 8AM</p>
             <p>Second Service: 3PM</p>
           </div>
           <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">Wednesdays</h3>
+            <h3 className="text-xl font-bold mb-2 text-gray-800 ">Wednesdays</h3>
             <p>Acts of the Believers: 6PM</p>
           </div>
         </div>
@@ -92,7 +92,7 @@ export default function HomePage() {
         </p>
         <a
           href="/contact"
-          className="inline-block bg-white text-[#3D7069] dark:text-[#3D7069] px-6 py-3 rounded-lg font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition"
+          className="inline-block bg-white text-[#3D7069] dark:text-[#3D7069] px-6 py-6 rounded-lg font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition"
         >
           Get in Touch
         </a>
