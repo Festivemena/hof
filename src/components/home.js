@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function HomePage() {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100 dark:bg-gray-900 min-h-screen">
       {/* Hero Section */}
-      <div className="bg-[#071919] text-white mb-5 text-center">
+      <div className="bg-[#071919] dark:bg-[#1a202c] text-white mb-5 text-center">
         <Image
           src="/2.jpg"
           alt="House of Flames Global"
@@ -20,7 +20,7 @@ export default function HomePage() {
         <div className="mt-6 pb-4">
           <a
             href="/about"
-            className="inline-block bg-[#B41000] px-6 py-3 text-white rounded-lg font-medium hover:bg-[#2e5953] transition"
+            className="inline-block bg-[#B41000] px-6 py-3 text-white rounded-lg font-medium hover:bg-[#2e5953] dark:hover:bg-[#3e5061] transition"
           >
             Learn More About Us
           </a>
@@ -28,10 +28,10 @@ export default function HomePage() {
       </div>
 
       {/* Highlights Section */}
-      <section className="py-12 px-6 bg-gray-200">
-        <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">What We Do</h2>
+      <section className="py-12 px-6 bg-gray-200 dark:bg-gray-800">
+        <h2 className="text-3xl font-semibold text-center text-gray-800 dark:text-white mb-6">What We Do</h2>
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
+          {[ 
             {
               title: "Reaching Out",
               description:
@@ -48,19 +48,19 @@ export default function HomePage() {
                 "Preparing individuals for God-representation and purpose fulfillment.",
             },
           ].map((item, idx) => (
-            <div key={idx} className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-              <p>{item.description}</p>
+            <div key={idx} className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">{item.title}</h3>
+              <p className="text-gray-600 dark:text-gray-300">{item.description}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Vision Section */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-white dark:bg-gray-900">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-4">Our Vision</h2>
-          <p className="text-lg text-gray-700">
+          <h2 className="text-3xl font-semibold text-gray-800 dark:text-white mb-4">Our Vision</h2>
+          <p className="text-lg text-gray-700 dark:text-gray-300">
             To prepare quality men who are liberated, revived, reformed, and equipped 
             to represent God across generations and territories.
           </p>
@@ -68,23 +68,23 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-12 px-6 bg-gray-200">
-        <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">Join Our Services</h2>
+      <section className="py-12 px-6 bg-gray-200 dark:bg-gray-800">
+        <h2 className="text-3xl font-semibold text-center text-gray-800 dark:text-white mb-6">Join Our Services</h2>
         <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-bold mb-2">Sundays</h3>
+          <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">Sundays</h3>
             <p>First Service: 8AM</p>
             <p>Second Service: 3PM</p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-bold mb-2">Wednesdays</h3>
+          <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">Wednesdays</h3>
             <p>Acts of the Believers: 6PM</p>
           </div>
         </div>
       </section>
 
       {/* Call to Action Section */}
-      <section className="bg-[#B41000] text-white py-12 px-6 text-center">
+      <section className="bg-[#B41000] dark:bg-[#B41000] text-white py-12 px-6 text-center">
         <h2 className="text-3xl font-bold mb-4">Be a Part of Our Mission</h2>
         <p className="text-lg mb-6">
           Whether you’re looking for spiritual growth, discipleship, or a way to contribute
@@ -92,7 +92,7 @@ export default function HomePage() {
         </p>
         <a
           href="/contact"
-          className="inline-block bg-white text-[#3D7069] px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition"
+          className="inline-block bg-white text-[#3D7069] dark:text-[#3D7069] px-6 py-3 rounded-lg font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition"
         >
           Get in Touch
         </a>
