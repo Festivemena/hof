@@ -12,6 +12,7 @@ import Act from "../../web/act.png";
 import Pra from "../../web/pra.png";
 import Link from "next/link";
 import Mission from '../../web/mission.png'
+import HomePage from "@/components/home";
 import { GrGallery } from "react-icons/gr";
 import { MdAudiotrack } from "react-icons/md";
 import { MdOutlineSlowMotionVideo } from "react-icons/md";
@@ -71,12 +72,13 @@ export default function Home() {
 </div>
 <div className="hero bg-base-200 h-full">
   <div className=" w-full flex-col lg:flex-row">
-    <Image onClick={() => router.push('/')}
+    {/* <Image onClick={() => router.push('/')}
       src={Hi} width={1400} height={500}
       className="w-full flex lg:hidden  rounded-lg shadow-2xl" />
       <Image onClick={() => router.push('/')}
       src={Bg} width={1400} height={500}
-      className="w-full hidden lg:flex rounded-lg shadow-2xl" />
+      className="w-full hidden lg:flex rounded-lg shadow-2xl" /> */}
+      <HomePage />  
     <div>
     <dialog id="my_modal_1" className="modal">
     <div className="modal-box">
@@ -106,7 +108,7 @@ export default function Home() {
     </div>
   </div>
 </div>
-<div className="carousel w-full">
+{/* <div className="carousel w-full">
   <div id="slide1" className="carousel-item relative w-full">
     <Image width={320} height={250}
       src={Act} 
@@ -143,7 +145,7 @@ export default function Home() {
       <a href="#slide1" className="btn btn-circle">❯</a>
     </div>
   </div>
-</div>
+</div> */}
 {/* Recommended Sermons */}
 <div>
   {/* card */}
@@ -160,7 +162,7 @@ export default function Home() {
   </aside>
   <nav>
     <div className="grid grid-flow-col gap-1">
-      <a href='facebook.com/thehofglobalmin'>
+      <a href='https://facebook.com/thehofglobalmin'>
         <FaFacebook size={24} color="#fff" />
       </a>
       <a href='https://wa.me/+2349032865677'>

@@ -1,52 +1,129 @@
-import Image from "next/image";
-import Logo from "../../../web/logo.png";
-import Link from "next/link";
-// import { useRouter } from "next/navigation";
-
-export default function About() {
+export default function AboutPage() {
   return (
-    <main className="bg-black pt-10 w-full h-full">
-    <div className="px-6 flex justify-between sticky w-full">
-    <Link href={"/"}>
-      <div className=" ml-10 text-3xl">
-        <Image src={Logo} width={70} height={70} />
+    <div className="bg-gray-100 min-h-screen">
+      {/* Hero Section */}
+      <div className="bg-[#071919] text-white py-16 px-6 text-center">
+        <h1 className="text-4xl font-bold mb-4">About The House of Flames Global</h1>
+        <p className="text-lg max-w-4xl mx-auto">
+          The House of Flames is a mandate raised to prepare quality men across generations
+          who are liberated, revived, reformed, and equipped to represent God and raise others.
+        </p>
       </div>
-    </Link>
-      <div className=" text-white">
-    <div className="justify-between text-lg flex mr-24 pt-6 px-4">
-        <Link href={"/about"}>
-      <div className='mx-auto text-[#CA0000] pr-4'>About HOF</div></Link>
-      <div className='mx-auto pr-4'>Register</div>
-      <div className='mx-auto pr-4'>Contact</div>
-      <div className='mx-auto pr-4'>Sermons</div>
-      <div className='mx-auto pr-4'>Givings</div>
+
+      {/* Mission Section */}
+      <section className="py-12 px-6">
+        <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">Our Mission Cycle</h2>
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-bold mb-2">Reaching Out</h3>
+            <p>
+              Reaching out to raw men – the unsaved, unreached, unchurched, and undisciplined –
+              via effective outreaches.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-bold mb-2">Processing</h3>
+            <p>
+              Bringing men into the House of Flames for processing through effective publicity.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-bold mb-2">Teaching</h3>
+            <p>
+              Teaching men to become effective disciples through our discipleship platforms.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-bold mb-2">Equipping</h3>
+            <p>
+              Equipping disciples to be effective witnesses for their individual assignment
+              and God-representation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision Section */}
+      <section className="bg-gray-200 py-12 px-6">
+        <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">Our Vision Cardinals</h2>
+        <p className="text-center mb-8 max-w-4xl mx-auto">
+          We believe that every man is complete when he is:
+        </p>
+        <div className="flex flex-wrap justify-center gap-4">
+          {["Saved", "Liberated", "Revived", "Transformed", "Equipped"].map((item, idx) => (
+            <span
+              key={idx}
+              className="bg-[#3D7069] text-white px-4 py-2 rounded-full font-semibold shadow-lg"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-12 px-6">
+        <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">Our Services</h2>
+        <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-bold mb-2">Sundays</h3>
+            <p>First Service: 8AM</p>
+            <p>Second Service: 3PM</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-bold mb-2">Wednesdays</h3>
+            <p>Acts of the Believers: 6PM</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Values Section */}
+      <section className="bg-gray-200 py-12 px-6">
+        <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">Core Values</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {[
+            { label: "G", value: "Growing" },
+            { label: "O", value: "Open & Accountable" },
+            { label: "D", value: "Disciplined" },
+            { label: "S", value: "Servants" },
+            { label: "R", value: "Respectful" },
+            { label: "E", value: "Excellent" },
+            { label: "P", value: "Pure" },
+          ].map((core, idx) => (
+            <div
+              key={idx}
+              className="bg-white p-4 rounded-lg shadow-lg text-center"
+            >
+              <h3 className="text-2xl font-bold text-[#3D7069] mb-2">{core.label}</h3>
+              <p>{core.value}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Scope Section */}
+      <section className="py-12 px-6">
+        <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">The Scope</h2>
+        <p className="text-center max-w-4xl mx-auto mb-8">
+          The House of Flames’ mandate is multifocal, extending to individuals, territories, nations, 
+          and internationally.
+        </p>
+        <div className="flex flex-wrap justify-center gap-4">
+          {[
+            "Individual: Reaching each with the mandate.",
+            "Territorial: Reaching cities, towns, and villages.",
+            "National: Contributing to national prophecy fulfillment.",
+            "International: Unto the uttermost parts of the earth (Acts 1:8).",
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-[#3D7069] text-white px-6 py-4 rounded-lg shadow-lg max-w-xs text-center"
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
-  </div>
-      </div> 
-      <div className='w-full flex'>
-      {/* <Image src={Dez} className=" z-30" width={600} height={450} /> */}
-      <div className="mt-16 pr-12 ml-7">
-        <div className="w-[850px] rounded-xl text-lg text-center text-black font-black text-pretty shadow-inner px-4 py-3 bg-white">
-        HOF is a Force on a Rescue Mission to minister liberty to God’s people across Nations under the influence of darkness in any form. HOF is home for the rescued souls and an equipping centre for Called soldiers.
-        </div>
-        <div className="w-[850px] z-30 relative mt-4 rounded-xl text-black text-center text-pretty shadow-inner px-4 py-3 bg-white">
-        I had a vision where I saw horses with soldiers on them, I looked at the frontline of this army and I saw Jesus leading this army. They were all standing, preparing or waiting for something. I looked far back and I began to see empty horses – horses without riders. I knew that was a problem! No wonder the army was not moving yet. Then Jesus said to me “Tell them I need them!”
-I looked far ahead, at the other side of this army. I saw a gate with bars of Iron. I knew it was that gate the Bible described in Psalms – “He has broken the gate of brass and cut the bars of iron in sunder”. I could see through the gate and all I saw was GROSS Darkness, very thick darkness! I knew people were in it who needed to be rescued from that grip of darkness!
-Months later, I was praying at home around past 10 on a Sunday morning and as I was rounding up, God spoke to me, “Raise me a people who can confront darkness!” I responded with fear “Confront Darkness? Lord, I never would want this. How would I even start? What do I know?” I just wanted to be a teacher of the Word.
-To God’s glory – an apostolic mandate of Liberty, Understanding and Revival was born and kicked off on the 29th of July, 2022 in Ayobo, Lagos, Nigeria and moved to Ekosodin, Benin City, Nigeria where we hope to launch into the nations.
-        </div>
-        <div className="w-[850px] rounded-xl text-lg text-left mt-4 mb-4 text-black font-black text-pretty shadow-inner px-4 py-3 bg-white">
-        ➢ To invade the Dark Gates via effectual fervent prayers
-<br/>➢ To minister liberty to the souls under the influence of darkness by reaching out with God’s power.
-<br/>➢ To bring in rescued souls to the Reformation Home (RH) to restore and improve the quality of their lives by the teaching of God’s Revealed Word.
-<br/>➢ To equip the Force for their called assignments & send them for Kingdom services
-        </div>
-     </div>
-    </div>
-    {/* <div className="w-full h-full items-stretch relative -mt-52">
-      <Image src={Bg} width={1600} height={250} />
-    </div> */}
-   
-    </main>
   );
 }
