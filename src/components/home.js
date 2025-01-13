@@ -50,7 +50,7 @@ export default function HomePage() {
           ].map((item, idx) => (
             <div key={idx} className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">{item.title}</h3>
-              <p className="text-gray-600">{item.description}</p>
+              <p className="text-gray-200">{item.description}</p>
             </div>
           ))}
         </div>
@@ -60,7 +60,7 @@ export default function HomePage() {
       <section className="py-16 px-6 bg-white dark:bg-gray-900">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-semibold text-gray-800 dark:text-white mb-4">Our Vision</h2>
-          <p className="text-lg text-gray-700">
+          <p className="text-lg text-gray-300">
             To prepare quality men who are liberated, revived, reformed, and equipped 
             to represent God across generations and territories.
           </p>
