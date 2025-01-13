@@ -73,12 +73,12 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg">
             <h3 className="text-xl font-bold mb-2 text-gray-800 ">Sundays</h3>
-            <p>First Service: 8AM</p>
-            <p>Second Service: 3PM</p>
+            <p class name="text-black">First Service: 8AM</p>
+            <p class name="text-black">Second Service: 3PM</p>
           </div>
           <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg">
             <h3 className="text-xl font-bold mb-2 text-gray-800 ">Wednesdays</h3>
-            <p>Acts of the Believers: 6PM</p>
+            <p class name="text-black">Acts of the Believers: 6PM</p>
           </div>
         </div>
       </section>
