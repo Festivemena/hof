@@ -91,7 +91,7 @@ export default function HomePage() {
           to transforming lives, we invite you to join us.
         </p>
         <a
-          href="/contact"
+          href="https://whatsapp.com/channel/0029VawQzQjADTONWbLwK10P"
           className="inline-block bg-white text-[#3D7069] dark:text-[#3D7069] px-6 py-6 rounded-lg font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition"
         >
           Get in Touch
