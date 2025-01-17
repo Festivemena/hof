@@ -6,7 +6,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <div className="bg-[#071919] dark:bg-[#1a202c] text-white mb-5 text-center">
         <Image
-          src="/3.jpg"
+          src="/2.jpg"
           alt="House of Flames Global"
           width={1500}
           height={250}
